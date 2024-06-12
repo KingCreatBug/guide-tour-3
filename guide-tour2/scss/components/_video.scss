@@ -1,0 +1,110 @@
+@use "../abstracts";
+
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.video {
+    margin-top: 150px;
+
+    &__title {
+        width: 43%;
+        margin: 0 auto;
+        text-align: center;
+
+        @include abstracts.screen(xxl) {
+            width: 50%;
+        }
+
+        @include abstracts.screen(xl) {
+            width: 60%;
+        }
+
+        @include abstracts.screen(md) {
+            width: 80%;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 100%;
+        }
+    }
+}
+
+.video-containers {
+    margin-top: 70px;
+
+    &__list {
+        @extend %flexItemCenter;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 38px;
+    }
+
+    &__item {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #191b1d;
+        opacity: 30%;
+        cursor: pointer;
+
+        &--active {
+            height: 24px;
+            background: #39c5d7;
+            opacity: 1;
+            border-radius: 99px;
+            cursor: default;
+        }
+    }
+}
+
+.video-container {
+    display: none;
+
+    &--active {
+        display: block;
+    }
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__video {
+        width: 100%;
+        height: 570px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        margin-top: 22px;
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__title,
+    &__desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__desc {
+        margin-top: 0;
+    }
+}

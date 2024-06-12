@@ -1,0 +1,25 @@
+@use "../abstracts";
+
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.partner {
+    width: 100%;
+    overflow: hidden;
+    background: #ffc20066;
+
+    &__inner {
+        @extend %flexItemCenter;
+        gap: 55px;
+        padding: 26px 0;
+    }
+
+    &__img {
+        display: block;
+        width: 180px;
+        height: 90px;
+        object-fit: contain;
+    }
+}

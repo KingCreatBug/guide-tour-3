@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="header__inner">
+        <a class="logo" href="./">
+            <img src="./assets/img/logo.png" alt="" class="logo__img" />
+            <h1 class="logo__text d-xl-none d-lg-block d-md-none">
+                Dana TourGuide
+            </h1>
+        </a>
+        <!-- Nav PC -->
+        <nav class="header-navbar d-lg-none">
+            <ul class="header-navbar__list">
+                <li class="header-navbar__item">
+                    <a href="./index.html" class="header-navbar__link"
+                        >Trang chủ</a
+                    >
+                </li>
+                <li class="header-navbar__item">
+                    <a href="#!" class="header-navbar__link">Thành Viên</a>
+                </li>
+                <li class="header-navbar__item">
+                    <a href="#new" class="header-navbar__link">Tin tức</a>
+                </li>
+                <li class="header-navbar__item">
+                    <a href="#blog" class="header-navbar__link">Bài viết</a>
+                </li>
+                <li class="header-navbar__item">
+                    <a href="#!" class="header-navbar__link">Về chúng tôi</a>
+                </li>
+                <li class="header-navbar__item">
+                    <a href="#!" class="header-navbar__link">Liên hệ</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-action">
+            <a href="#!" class="header-action__link d-xxl-none">Đăng nhập</a>
+            <a href="#!" class="header-action__btn btn btn--nav">Đăng ký</a>
+        </div>
+        <!-- Navigator mobile/tablet -->
+        <nav class="navbar-mobile d-none d-lg-block">
+            <div class="navbar-mobile__wrap">
+                <button class="js-toggle" toggle-target="#navbar">
+                    <img src="./assets/icons/menu.svg" alt="" />
+                </button>
+                <p class="navbar-mobile__text">Menu</p>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- Modal: navbar mobile -->
+<div>
+    <div id="navbar" class="mobile hide d-none d-lg-block">
+        <a class="logo__mobile" href="./">
+            <img src="./assets/img/logo.png" alt="" class="logo__img" />
+            <h1 class="logo__text">Dana TourGuide</h1>
+        </a>
+        <ul class="header-navbar__list">
+            <li class="header-navbar__item">
+                <a href="./index.html" class="header-navbar__link">Trang chủ</a>
+            </li>
+            <li class="header-navbar__item">
+                <a href="#!" class="header-navbar__link">Thành Viên</a>
+            </li>
+            <li class="header-navbar__item">
+                <a href="#new" class="header-navbar__link">Tin tức</a>
+            </li>
+            <li class="header-navbar__item">
+                <a href="#blog" class="header-navbar__link">Bài viết</a>
+            </li>
+            <li class="header-navbar__item">
+                <a href="#!" class="header-navbar__link">Về chúng tôi</a>
+            </li>
+            <li class="header-navbar__item">
+                <a href="#!" class="header-navbar__link">Liên hệ</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mobile__overlay js-toggle" toggle-target="#navbar"></div>
+</div>

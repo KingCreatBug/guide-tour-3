@@ -1,0 +1,126 @@
+@use "../abstracts";
+
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe {
+    position: relative;
+    margin-top: 150px;
+    background: #39c5d7;
+    overflow: hidden;
+
+    &::after {
+        content: url(../../assets/img/subscribe/bg.png);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        opacity: 0.5;
+        z-index: 1;
+    }
+
+    &__inner {
+        position: relative;
+        @extend %flexItemCenter;
+        gap: 70px;
+        padding: 100px 0;
+        z-index: 2;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+
+    &__img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+
+        @include abstracts.screen(xl) {
+            width: 218px;
+            height: 218px;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        color: var(--text-dark);
+        background: var(--second-color-btn);
+        padding: 15px 35px;
+        border-radius: 8px;
+
+        color: var(--text-dark);
+        font-size: 1.8rem;
+        font-weight: 600;
+        transition: 800ms ease all;
+
+        @include abstracts.screen(xxl) {
+            padding: 15px 25px;
+        }
+
+        @include abstracts.screen(xl) {
+            position: absolute;
+            bottom: 43px;
+            right: 224px;
+        }
+
+        @include abstracts.screen(lg) {
+            right: 237px;
+        }
+
+        @include abstracts.screen(md) {
+            position: initial;
+        }
+
+        &:hover {
+            background: transparent;
+            color: #fff;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 2px;
+            width: 0;
+            background: var(--second-color-btn);
+            transition: 400ms ease all;
+        }
+
+        &::after {
+            right: inherit;
+            top: inherit;
+            left: 0;
+            bottom: 0;
+        }
+
+        &:hover::before,
+        &:hover::after {
+            width: 100%;
+            transition: 800ms ease all;
+        }
+    }
+}
+
+.subscribe-content {
+    width: 45%;
+
+    @include abstracts.screen(lg) {
+        width: 100%;
+    }
+
+    @include abstracts.screen(md) {
+        text-align: center;
+    }
+
+    &__title,
+    &__desc {
+        color: #fff;
+    }
+}

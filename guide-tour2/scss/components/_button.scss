@@ -1,0 +1,27 @@
+@use "../abstracts";
+
+.btn {
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 99px;
+
+    background: #fff;
+    border: 1px solid #39c5d7;
+
+    color: #39c5d7;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.75;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: #fff;
+        background: #39c5d7;
+    }
+
+    @include abstracts.screen(lg) {
+        padding: 5px 18px;
+        font-size: 1.6rem;
+    }
+}

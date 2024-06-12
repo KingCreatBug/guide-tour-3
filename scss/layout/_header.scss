@@ -1,0 +1,135 @@
+@use "../abstracts";
+
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    background: var(--bg-color);
+    &__inner {
+        position: relative;
+        @extend %flexItemCenter;
+        justify-content: space-between;
+        padding: 24px 0;
+
+        @include abstracts.screen(lg) {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.header-navbar {
+    &__list {
+        @extend %flexItemCenter;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__item {
+        padding: 5px 15px;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        @include abstracts.screen(lg) {
+            padding: 5px 0;
+        }
+    }
+
+    &__link {
+        position: relative;
+        padding: 15px 16px;
+        color: var(--text-gray);
+        font-weight: 500;
+        line-height: 1.75;
+        transition: 0.25s;
+        text-transform: capitalize;
+
+        &:hover {
+            color: var(--text-red-pink);
+        }
+
+        @include abstracts.screen(xxl) {
+            padding: 3px;
+        }
+    }
+}
+
+.header-action {
+    @extend %flexItemCenter;
+    gap: 30px;
+
+    &__link {
+        display: inline-block;
+        color: var(--text-red-pink);
+        font-weight: 600;
+        line-height: 1.75;
+        text-transform: capitalize;
+    }
+}
+
+.navbar-mobile {
+    &__wrap {
+        @extend %flexItemCenter;
+        gap: 5px;
+    }
+
+    &__text {
+        color: var(--Text-Color-White);
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.48;
+    }
+}
+
+.mobile {
+    position: fixed;
+    inset: 0 50% 0 0;
+    background: #fff;
+    z-index: 99;
+    padding: 20px 50px;
+    translate: -100%;
+    transition: translate 0.5s;
+
+    @include abstracts.screen(sm) {
+        inset: 0 20% 0 0;
+    }
+
+    &.show {
+        translate: 0;
+        box-shadow: 0px 40px 90px 20px var(--Text-Color-Dark);
+    }
+
+    &.hide ~ &__overlay {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &.show ~ &__overlay {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__overlay {
+        visibility: hidden;
+        opacity: 0;
+
+        @include abstracts.screen(lg) {
+            visibility: visible;
+            opacity: 1;
+            position: fixed;
+            inset: 0;
+            z-index: 88;
+            background: rgba($color: #000000, $alpha: 0.4);
+        }
+    }
+}
