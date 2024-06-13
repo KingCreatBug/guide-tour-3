@@ -1433,7 +1433,7 @@ html {
   gap: 5px;
 }
 .navbar-mobile__text {
-  color: var(--Text-Color-White);
+  color: var(--text-red-pink);
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 1.48;
@@ -1725,11 +1725,6 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.5;
-}
-@media (max-width: 1399.98px) {
-  .hero::after {
-    left: 28%;
-  }
 }
 @media (max-width: 991.98px) {
   .hero {

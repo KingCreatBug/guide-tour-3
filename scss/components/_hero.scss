@@ -21,10 +21,6 @@
         background-size: cover;
         background-repeat: no-repeat;
         opacity: 0.5;
-
-        @include abstracts.screen(xxl) {
-            left: 28%;
-        }
     }
 
     @include abstracts.screen(lg) {
