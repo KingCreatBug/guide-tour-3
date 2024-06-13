@@ -21,6 +21,15 @@
         background-size: cover;
         background-repeat: no-repeat;
         opacity: 0.5;
+
+        @include abstracts.screen(xxl) {
+            left: 40%;
+        }
+
+        @include abstracts.screen(xl) {
+            top: 35px;
+            left: 30%;
+        }
     }
 
     @include abstracts.screen(lg) {

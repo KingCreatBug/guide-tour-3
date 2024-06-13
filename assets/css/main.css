@@ -1726,6 +1726,17 @@ html {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
+@media (max-width: 1399.98px) {
+  .hero::after {
+    left: 40%;
+  }
+}
+@media (max-width: 1199.98px) {
+  .hero::after {
+    top: 35px;
+    left: 30%;
+  }
+}
 @media (max-width: 991.98px) {
   .hero {
     overflow: hidden;
